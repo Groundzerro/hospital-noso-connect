@@ -1,0 +1,33 @@
+resource "aws_connect_contact_flow" "flow" {
+  for_each = var.flows
+
+  instance_id = var.instance_id
+  name        = "${var.name_prefix}-${each.key}"
+  description = each.value.description
+  type        = "CONTACT_FLOW"
+  content     = file(each.value.file_path)
+}
+
+
+# This style is good for creating brand new flows because it will create brand new IDs.
+# resource "terraform_data" "flow_file_hash" {
+#   for_each = var.flows
+#   input    = filesha256(each.value.file_path)
+# }
+
+# resource "aws_connect_contact_flow" "flow" {
+#   for_each = var.flows
+
+#   instance_id = var.instance_id
+#   name        = "${var.name_prefix}-${each.key}"
+#   description = each.value.description
+#   type        = "CONTACT_FLOW"
+#   content     = file(each.value.file_path)
+
+#   lifecycle {
+#     replace_triggered_by = [
+#       terraform_data.flow_file_hash[each.key]
+#     ]
+#   }
+# }
+

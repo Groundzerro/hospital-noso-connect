@@ -1,0 +1,132 @@
+{
+    "Version": "2019-10-30",
+    "StartAction": "acc6e6af-c230-408c-a7be-76e2ce3317d6",
+    "Metadata": {
+      "entryPointPosition": {
+        "x": 40,
+        "y": 40
+      },
+      "ActionMetadata": {
+        "37797ea5-e95b-465c-af82-135858447013": {
+          "position": {
+            "x": 654.4,
+            "y": 100
+          }
+        },
+        "864f826c-e885-4737-9d25-f8ded9e18ec8": {
+          "position": {
+            "x": 396,
+            "y": 105.6
+          },
+          "parameters": {
+            "AgentId": {
+              "useDynamic": true
+            }
+          },
+          "useDynamic": true
+        },
+        "8a53cfb1-ea8c-4ec5-adff-89fba9b59fe6": {
+          "position": {
+            "x": 1076,
+            "y": 105.6
+          }
+        },
+        "acc6e6af-c230-408c-a7be-76e2ce3317d6": {
+          "position": {
+            "x": 152,
+            "y": 110.4
+          }
+        },
+        "62b82b41-8ebc-42c5-a6b8-f69e28869c4d": {
+          "position": {
+            "x": 877.6,
+            "y": 265.6
+          }
+        }
+      },
+      "Annotations": [],
+      "name": "ns-language-module",
+      "description": "",
+      "status": "saved",
+      "settings": {},
+      "hash": {}
+    },
+    "Actions": [
+      {
+        "Parameters": {},
+        "Identifier": "37797ea5-e95b-465c-af82-135858447013",
+        "Type": "TransferContactToQueue",
+        "Transitions": {
+          "NextAction": "62b82b41-8ebc-42c5-a6b8-f69e28869c4d",
+          "Errors": [
+            {
+              "NextAction": "62b82b41-8ebc-42c5-a6b8-f69e28869c4d",
+              "ErrorType": "QueueAtCapacity"
+            },
+            {
+              "NextAction": "62b82b41-8ebc-42c5-a6b8-f69e28869c4d",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "AgentId": "$.Agent.ARN"
+        },
+        "Identifier": "864f826c-e885-4737-9d25-f8ded9e18ec8",
+        "Type": "UpdateContactTargetQueue",
+        "Transitions": {
+          "NextAction": "37797ea5-e95b-465c-af82-135858447013",
+          "Errors": [
+            {
+              "NextAction": "62b82b41-8ebc-42c5-a6b8-f69e28869c4d",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {},
+        "Identifier": "8a53cfb1-ea8c-4ec5-adff-89fba9b59fe6",
+        "Type": "DisconnectParticipant",
+        "Transitions": {}
+      },
+      {
+        "Parameters": {
+          "Text": "Transferring now..."
+        },
+        "Identifier": "acc6e6af-c230-408c-a7be-76e2ce3317d6",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "864f826c-e885-4737-9d25-f8ded9e18ec8"
+        }
+      },
+      {
+        "Parameters": {
+          "Text": "Failed to transfer."
+        },
+        "Identifier": "62b82b41-8ebc-42c5-a6b8-f69e28869c4d",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "8a53cfb1-ea8c-4ec5-adff-89fba9b59fe6"
+        }
+      }
+    ],
+    "Settings": {
+      "InputParameters": [],
+      "OutputParameters": [],
+      "Transitions": [
+        {
+          "DisplayName": "Success",
+          "ReferenceName": "Success",
+          "Description": ""
+        },
+        {
+          "DisplayName": "Error",
+          "ReferenceName": "Error",
+          "Description": ""
+        }
+      ]
+    }
+}

@@ -1,0 +1,17 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+crash.log
+*.tfvars.backup
+override.tf
+*.plan
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local junk
+.DS_Store
+.idea/
+.vscode/

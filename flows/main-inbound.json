@@ -1,0 +1,589 @@
+{
+    "Version": "2019-10-30",
+    "StartAction": "5d815733-0521-4de4-bb25-cd22afc94991",
+    "Metadata": {
+      "entryPointPosition": {
+        "x": 40,
+        "y": 40
+      },
+      "ActionMetadata": {
+        "8bf2e6d2-433a-4b1b-812e-2e09f298933e": {
+          "position": {
+            "x": 1704,
+            "y": 22.4
+          },
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample Queue Configurations Flow"
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample Queue Configurations Flow"
+          }
+        },
+        "5d815733-0521-4de4-bb25-cd22afc94991": {
+          "position": {
+            "x": 224,
+            "y": 25.6
+          },
+          "parameters": {
+            "EventHooks": {}
+          }
+        },
+        "6db1ce7c-0d1f-4cb3-92e5-dfbafe5bb263": {
+          "position": {
+            "x": 590.4,
+            "y": 32
+          },
+          "conditions": [],
+          "conditionMetadata": [
+            {
+              "id": "4b8eecf6-6635-4a50-8e1a-248f74285f57",
+              "operator": {
+                "name": "Equals",
+                "value": "Equals",
+                "shortDisplay": "="
+              },
+              "value": "CHAT"
+            },
+            {
+              "id": "6673fe43-92b2-40e0-b792-cb651781955a",
+              "operator": {
+                "name": "Equals",
+                "value": "Equals",
+                "shortDisplay": "="
+              },
+              "value": "TASK"
+            }
+          ]
+        },
+        "bedb95a7-e9a1-4f34-a9d8-206e70557ce0": {
+          "position": {
+            "x": 1396.8,
+            "y": 78.4
+          }
+        },
+        "d6d60786-fa66-4b1a-8723-f115e6c81565": {
+          "position": {
+            "x": 1708,
+            "y": 182.4
+          },
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample secure input with no agent"
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample secure input with no agent"
+          }
+        },
+        "9f73edea-8a03-4210-8e5a-ac93f4908cd7": {
+          "position": {
+            "x": 722.4,
+            "y": 310.4
+          },
+          "conditions": [],
+          "conditionMetadata": [
+            {
+              "id": "d35c131d-fb6c-40d5-9e74-79d40f5d6339",
+              "operator": {
+                "name": "Equals",
+                "value": "Equals",
+                "shortDisplay": "="
+              },
+              "value": "true"
+            }
+          ]
+        },
+        "b757c649-c428-4487-a34c-2713f8561ad4": {
+          "position": {
+            "x": 1385.6,
+            "y": 342.4
+          },
+          "conditionMetadata": [
+            {
+              "id": "627509e8-4127-4537-ac72-8f3a673d3639",
+              "value": "1"
+            },
+            {
+              "id": "45339727-b17e-406e-bab7-662c51881d91",
+              "value": "2"
+            },
+            {
+              "id": "1d78cbc0-3bb0-4e4f-a5ef-548641b6802c",
+              "value": "3"
+            },
+            {
+              "id": "35ac1474-1e85-41d6-a742-5c250bc29f40",
+              "value": "4"
+            },
+            {
+              "id": "abfaa004-c807-41ca-b317-1833ab94f54c",
+              "value": "5"
+            },
+            {
+              "id": "d1e0f262-7e5d-41f4-8322-a1064a8a1025",
+              "value": "6"
+            },
+            {
+              "id": "9873ca9f-9352-4227-8349-3c8d0699e2bc",
+              "value": "7"
+            }
+          ]
+        },
+        "2a18e0bc-ff8d-4de5-b9c7-085cdb2aead2": {
+          "position": {
+            "x": 1708.8,
+            "y": 345.6
+          },
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample Lambda integration"
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample Lambda integration"
+          }
+        },
+        "4064b80c-aa40-4f0b-9b9c-6665be0cc4ab": {
+          "position": {
+            "x": 1705.6,
+            "y": 500
+          },
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample note for screenpop"
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample note for screenpop"
+          }
+        },
+        "ec10bcdf-5090-4203-80e1-1af853e48ba9": {
+          "position": {
+            "x": 1153.6,
+            "y": 513.6
+          }
+        },
+        "27302950-af23-4fa0-8375-8a032108edf8": {
+          "position": {
+            "x": 932.8,
+            "y": 519.2
+          },
+          "dynamicParams": []
+        },
+        "92e12957-4061-42c9-bc15-bb966fc9ff78": {
+          "position": {
+            "x": 1986.4,
+            "y": 588
+          }
+        },
+        "1144e7ff-4f4a-463a-9e3c-37354c2cd868": {
+          "position": {
+            "x": 2209.6,
+            "y": 588.8
+          }
+        },
+        "4ab04860-82a7-43e0-9fe4-bed0a27d081f": {
+          "position": {
+            "x": 1726.4,
+            "y": 665.6
+          },
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample AB test"
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample AB test"
+          }
+        },
+        "a6436271-2e71-4e3a-b504-8ff2c08a8edf": {
+          "position": {
+            "x": 1728.8,
+            "y": 836
+          },
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample recording behavior"
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample recording behavior"
+          }
+        },
+        "63f3fbc6-32a3-43c5-bb76-f0d40001a041": {
+          "position": {
+            "x": 1730.4,
+            "y": 996
+          },
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample inbound flow (first contact experience)"
+            },
+            "Attributes": {
+              "CustomerPhoneNumber": {
+                "useDynamic": true
+              }
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample inbound flow (first contact experience)"
+          }
+        }
+      },
+      "Annotations": [],
+      "name": "ns_main_inbound",
+      "description": "",
+      "type": "contactFlow",
+      "status": "SAVED",
+      "hash": {}
+    },
+    "Actions": [
+      {
+        "Parameters": {
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/950df25a-b00d-4b83-bf86-3bb18fbc4359"
+        },
+        "Identifier": "8bf2e6d2-433a-4b1b-812e-2e09f298933e",
+        "Type": "TransferToFlow",
+        "Transitions": {
+          "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+          "Errors": [
+            {
+              "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "EventHooks": {
+            "CustomerRemaining": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/d9c0896d-8329-41b7-ab0c-c1428cca41e8"
+          }
+        },
+        "Identifier": "5d815733-0521-4de4-bb25-cd22afc94991",
+        "Type": "UpdateContactEventHooks",
+        "Transitions": {
+          "NextAction": "6db1ce7c-0d1f-4cb3-92e5-dfbafe5bb263",
+          "Errors": [
+            {
+              "NextAction": "6db1ce7c-0d1f-4cb3-92e5-dfbafe5bb263",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ComparisonValue": "$.Channel"
+        },
+        "Identifier": "6db1ce7c-0d1f-4cb3-92e5-dfbafe5bb263",
+        "Type": "Compare",
+        "Transitions": {
+          "NextAction": "9f73edea-8a03-4210-8e5a-ac93f4908cd7",
+          "Conditions": [
+            {
+              "NextAction": "bedb95a7-e9a1-4f34-a9d8-206e70557ce0",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "CHAT"
+                ]
+              }
+            },
+            {
+              "NextAction": "bedb95a7-e9a1-4f34-a9d8-206e70557ce0",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "TASK"
+                ]
+              }
+            }
+          ],
+          "Errors": [
+            {
+              "NextAction": "9f73edea-8a03-4210-8e5a-ac93f4908cd7",
+              "ErrorType": "NoMatchingCondition"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Text": "Hello, thanks for contacting us. This is an example of what the Amazon Connect virtual contact center can enable you to do."
+        },
+        "Identifier": "bedb95a7-e9a1-4f34-a9d8-206e70557ce0",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "8bf2e6d2-433a-4b1b-812e-2e09f298933e"
+        }
+      },
+      {
+        "Parameters": {
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/4993069a-7bbc-4d6f-ba2a-559a814f6686"
+        },
+        "Identifier": "d6d60786-fa66-4b1a-8723-f115e6c81565",
+        "Type": "TransferToFlow",
+        "Transitions": {
+          "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+          "Errors": [
+            {
+              "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ComparisonValue": "$.Attributes.greetingPlayed"
+        },
+        "Identifier": "9f73edea-8a03-4210-8e5a-ac93f4908cd7",
+        "Type": "Compare",
+        "Transitions": {
+          "NextAction": "27302950-af23-4fa0-8375-8a032108edf8",
+          "Conditions": [
+            {
+              "NextAction": "b757c649-c428-4487-a34c-2713f8561ad4",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "true"
+                ]
+              }
+            }
+          ],
+          "Errors": [
+            {
+              "NextAction": "27302950-af23-4fa0-8375-8a032108edf8",
+              "ErrorType": "NoMatchingCondition"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Text": "Press 1 to be put in queue for an agent.\n2 to securely enter content. \n3 to hear the results of an AWS Lambda data dip. \n4 to set a screen pop for the agent. \n5 to roll the dice and simulate a and b testing. \n6 to set call recording behavior.\nOr 7 to create a task for an agent.",
+          "StoreInput": "False",
+          "InputTimeLimitSeconds": "8"
+        },
+        "Identifier": "b757c649-c428-4487-a34c-2713f8561ad4",
+        "Type": "GetParticipantInput",
+        "Transitions": {
+          "NextAction": "a6436271-2e71-4e3a-b504-8ff2c08a8edf",
+          "Conditions": [
+            {
+              "NextAction": "8bf2e6d2-433a-4b1b-812e-2e09f298933e",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "1"
+                ]
+              }
+            },
+            {
+              "NextAction": "d6d60786-fa66-4b1a-8723-f115e6c81565",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "NextAction": "2a18e0bc-ff8d-4de5-b9c7-085cdb2aead2",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "3"
+                ]
+              }
+            },
+            {
+              "NextAction": "4064b80c-aa40-4f0b-9b9c-6665be0cc4ab",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "4"
+                ]
+              }
+            },
+            {
+              "NextAction": "4ab04860-82a7-43e0-9fe4-bed0a27d081f",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "5"
+                ]
+              }
+            },
+            {
+              "NextAction": "a6436271-2e71-4e3a-b504-8ff2c08a8edf",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "6"
+                ]
+              }
+            },
+            {
+              "NextAction": "63f3fbc6-32a3-43c5-bb76-f0d40001a041",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "7"
+                ]
+              }
+            }
+          ],
+          "Errors": [
+            {
+              "NextAction": "8bf2e6d2-433a-4b1b-812e-2e09f298933e",
+              "ErrorType": "InputTimeLimitExceeded"
+            },
+            {
+              "NextAction": "a6436271-2e71-4e3a-b504-8ff2c08a8edf",
+              "ErrorType": "NoMatchingCondition"
+            },
+            {
+              "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/f5e68215-409a-426c-8cb8-ed70a3143fd8"
+        },
+        "Identifier": "2a18e0bc-ff8d-4de5-b9c7-085cdb2aead2",
+        "Type": "TransferToFlow",
+        "Transitions": {
+          "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+          "Errors": [
+            {
+              "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/8c5763e5-0c21-4577-8cf6-5164839488f7"
+        },
+        "Identifier": "4064b80c-aa40-4f0b-9b9c-6665be0cc4ab",
+        "Type": "TransferToFlow",
+        "Transitions": {
+          "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+          "Errors": [
+            {
+              "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Text": "Hello, thanks for calling. These are some examples of what the Amazon Connect virtual contact center can enable you to do."
+        },
+        "Identifier": "ec10bcdf-5090-4203-80e1-1af853e48ba9",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "b757c649-c428-4487-a34c-2713f8561ad4"
+        }
+      },
+      {
+        "Parameters": {
+          "Attributes": {
+            "greetingPlayed": "true"
+          },
+          "TargetContact": "Current"
+        },
+        "Identifier": "27302950-af23-4fa0-8375-8a032108edf8",
+        "Type": "UpdateContactAttributes",
+        "Transitions": {
+          "NextAction": "ec10bcdf-5090-4203-80e1-1af853e48ba9",
+          "Errors": [
+            {
+              "NextAction": "ec10bcdf-5090-4203-80e1-1af853e48ba9",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Text": "We're sorry, an error occurred. Goodbye."
+        },
+        "Identifier": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "1144e7ff-4f4a-463a-9e3c-37354c2cd868"
+        }
+      },
+      {
+        "Parameters": {},
+        "Identifier": "1144e7ff-4f4a-463a-9e3c-37354c2cd868",
+        "Type": "DisconnectParticipant",
+        "Transitions": {}
+      },
+      {
+        "Parameters": {
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/eb742b91-dd4d-469a-bb64-569a818fd5aa"
+        },
+        "Identifier": "4ab04860-82a7-43e0-9fe4-bed0a27d081f",
+        "Type": "TransferToFlow",
+        "Transitions": {
+          "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+          "Errors": [
+            {
+              "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/7a00301c-469a-46cc-8d47-5cd843f2cec1"
+        },
+        "Identifier": "a6436271-2e71-4e3a-b504-8ff2c08a8edf",
+        "Type": "TransferToFlow",
+        "Transitions": {
+          "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+          "Errors": [
+            {
+              "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Name": "Sample task",
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/b344a894-30b5-4369-8628-bd2a64eaa1ed",
+          "Description": "Example of an agent task to investigate customer issue from sample inbound flow.",
+          "Attributes": {
+            "CustomerPhoneNumber": "$.CustomerEndpoint.Address",
+            "Type": "inbound"
+          }
+        },
+        "Identifier": "63f3fbc6-32a3-43c5-bb76-f0d40001a041",
+        "Type": "CreateTask",
+        "Transitions": {
+          "NextAction": "1144e7ff-4f4a-463a-9e3c-37354c2cd868",
+          "Errors": [
+            {
+              "NextAction": "92e12957-4061-42c9-bc15-bb966fc9ff78",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      }
+    ]
+  }
