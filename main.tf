@@ -47,3 +47,41 @@ module "contact_flows" {
 
   depends_on = [module.flow_modules]
 }
+
+# Prompts/config DynamoDB table
+module "prompts_table" {
+  source      = "./modules/dynamodb_prompts"
+  name_prefix = local.name_prefix
+}
+
+# Voicemail metadata DynamoDB table
+module "voicemail_table" {
+  source      = "./modules/dynamodb_voicemail"
+  name_prefix = local.name_prefix
+}
+
+# Voicemail audio S3 bucket
+module "voicemail_bucket" {
+  source      = "./modules/s3_voicemail"
+  name_prefix = local.name_prefix
+}
+
+# Lambda that looks up prompts
+module "prompt_lookup_lambda" {
+  source             = "./modules/lambda_prompt_lookup"
+  name_prefix        = local.name_prefix
+  prompts_table_name = module.prompts_table.table_name
+  prompts_table_arn  = module.prompts_table.table_arn
+
+  # optional override if you move code later
+  lambda_source_dir = "${path.root}/lambda/prompt_lookup"
+}
+
+
+# module "prompt_lookup_lambda" {
+#   source             = "./modules/lambda_prompt_lookup"
+#   name_prefix        = local.name_prefix
+#   prompts_table_name = module.prompts_table.table_name
+#   prompts_table_arn  = module.prompts_table.table_arn
+# }
+

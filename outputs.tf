@@ -17,3 +17,8 @@ output "module_arns" {
 output "flow_arns" {
   value = module.contact_flows.flow_arns
 }
+
+output "prompts_table_name" { value = module.prompts_table.table_name }
+output "voicemail_table_name" { value = module.voicemail_table.table_name }
+output "voicemail_bucket_name" { value = module.voicemail_bucket.bucket_name }
+output "prompt_lookup_lambda_arn" { value = module.prompt_lookup_lambda.lambda_arn }
