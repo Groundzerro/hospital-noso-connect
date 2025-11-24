@@ -40,28 +40,55 @@ routing_profiles = {
   }
 }
 
-flow_modules = {
-  "LanguageSelection" = {
-    description = "English/Spanish selector"
-    file_path   = "flows/language-module.json"
-  }
-  "HoursCheck" = {
-    description = "Business hours module"
-    file_path   = "flows/hours-module.json"
-  }
-  "DepartmentMenu" = {
-    description = "Routes to departments"
-    file_path   = "flows/dept-menu-module.json"
-  }
-  "AfterHoursVoicemail" = {
-    description = "After hours voicemail drop"
-    file_path   = "flows/afterhours-voicemail.json"
-  }
-}
-
 contact_flows = {
-  "MainInbound" = {
-    description = "Main Hospital of NOSO inbound IVR entrypoint"
+  MainInbound = {
+    description = "Main inbound"
     file_path   = "flows/main-inbound.json"
   }
 }
+
+flow_modules = {
+  LanguageSelect = {
+    description = "Language select module"
+    file_path   = "flows/modules/language-module.json"
+  }
+  DeptMenu = {
+    description = "Department menu module"
+    file_path   = "flows/modules/dept-menu-module.json"
+  }
+  Hours = {
+    description = "Hours module"
+    file_path   = "flows/modules/hours-module.json"
+  }
+  Voicemail = {
+    description = "Voicemail module"
+    file_path   = "flows/modules/afterhours-voicemail.json"
+  }
+}
+
+
+# flow_modules = {
+#   "LanguageSelection" = {
+#     description = "English/Spanish selector"
+#     file_path   = "flows/language-module.json"
+#   }
+#   "HoursCheck" = {
+#     description = "Business hours module"
+#     file_path   = "flows/hours-module.json"
+#   }
+#   "DepartmentMenu" = {
+#     description = "Routes to departments"
+#     file_path   = "flows/dept-menu-module.json"
+#   }
+#   "AfterHoursVoicemail" = {
+#     description = "After hours voicemail drop"
+#     file_path   = "flows/afterhours-voicemail.json"
+#   }
+# }
+
+# contact_flows = {
+#   "MainInbound" = {
+#     description = "Main Hospital of NOSO inbound IVR entrypoint"
+#     file_path   = "flows/main-inbound.json"
+#   }
+# }

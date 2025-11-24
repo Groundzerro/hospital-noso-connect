@@ -15,3 +15,41 @@ override.tf.json
 .DS_Store
 .idea/
 .vscode/
+*.swp
+*.swo
+
+
+# Python bytecode (for Lambda)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+#####################################
+# OS / misc
+#####################################
+Thumbs.db
+
+
+# # Terraform state files
+# *.tfstate
+# *.tfstate.*
+
+# # Terraform crash logs
+# crash.log
+
+# # Terraform local working dirs
+# .terraform/
+
+# # Terraform backups
+# *.tfvars.backup
+
+# # Override files
+# override.tf
+# override.tf.json
+# *_override.tf
+# *_override.tf.json
+
