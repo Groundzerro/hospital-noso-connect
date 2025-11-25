@@ -1,5 +1,5 @@
-aws_region  = "us-west-2"
-aws_profile = "default"
+aws_region = "us-west-2"
+# aws_profile = "default"
 
 instance_id = "5d253be2-f961-4d07-a04d-f9e36e6b5a7b"
 
