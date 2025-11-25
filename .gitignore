@@ -18,6 +18,9 @@ override.tf.json
 *.swp
 *.swo
 
+# Local tfvars (optional, but I’d keep it tracked)
+# If you want to keep terraform.local.tfvars private, uncomment:
+terraform.local.tfvars
 
 # Python bytecode (for Lambda)
 __pycache__/
