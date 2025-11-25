@@ -1,0 +1,39 @@
+name: Terraform Apply (Manual)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    environment: dev
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ vars.TF_VERSION }}
+
+      - name: Configure AWS Credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Terraform Init
+        run: terraform init -reconfigure
+
+      # Optional safety: generate plan right before apply
+      - name: Terraform Plan (pre-apply safety)
+        run: terraform plan -no-color
+
+      # Apply with compact warnings (cleaner logs)
+      - name: Terraform Apply (no destroy)
+        run: terraform apply -auto-approve -compact-warnings
