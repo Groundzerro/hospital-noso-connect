@@ -56,3 +56,78 @@ terraform fmt -recursive
 terraform validate
 terraform plan
 terraform apply
+
+
+hospital-noso-connect/
+├─ README.md
+├─ .gitignore
+├─ versions.tf
+├─ providers.tf
+├─ main.tf
+├─ variables.tf
+├─ outputs.tf
+├─ terraform.tfvars
+│
+├─ bootstrap_github_oidc/                  # one-time CI/CD identity stack
+│  ├─ versions.tf
+│  ├─ main.tf
+│  ├─ variables.tf
+│  └─ outputs.tf
+│
+├─ modules/                               # reusable infra modules (Phase 1+)
+│  ├─ hours_of_operation/
+│  │  ├─ main.tf
+│  │  ├─ variables.tf
+│  │  └─ outputs.tf
+│  ├─ queues/
+│  │  ├─ main.tf
+│  │  ├─ variables.tf
+│  │  └─ outputs.tf
+│  ├─ routing_profiles/
+│  │  ├─ main.tf
+│  │  ├─ variables.tf
+│  │  └─ outputs.tf
+│  ├─ contact_flow_modules/
+│  │  ├─ main.tf
+│  │  ├─ variables.tf
+│  │  └─ outputs.tf
+│  ├─ contact_flows/
+│  │  ├─ main.tf
+│  │  ├─ variables.tf
+│  │  └─ outputs.tf
+│  ├─ dynamodb_prompts/
+│  │  ├─ main.tf
+│  │  ├─ variables.tf
+│  │  └─ outputs.tf
+│  ├─ dynamodb_voicemail/
+│  │  ├─ main.tf
+│  │  ├─ variables.tf
+│  │  └─ outputs.tf
+│  ├─ s3_voicemail/
+│  │  ├─ main.tf
+│  │  ├─ variables.tf
+│  │  └─ outputs.tf
+│  └─ lambda_prompt_lookup/
+│     ├─ main.tf
+│     ├─ variables.tf
+│     └─ outputs.tf
+│
+├─ flows/                                 # Connect JSON exports (Phase 1)
+│  ├─ main-inbound.json
+│  ├─ modules/
+│  │  ├─ language-select.json
+│  │  ├─ dept-menu.json
+│  │  ├─ hours.json
+│  │  └─ voicemail.json
+│  └─ templates/                          # future .tftpl for dynamic IDs
+│     └─ (empty for now)
+│
+├─ lambda/                                # Lambda source code
+│  └─ prompt_lookup/
+│     ├─ app.py
+│     └─ requirements.txt                 # optional
+│
+└─ .github/
+   └─ workflows/                          # Phase 3 CI/CD (next)
+      ├─ terraform-plan.yml               # PR plan + comment
+      └─ terraform-apply.yml              # manual apply (workflow_dispatch)

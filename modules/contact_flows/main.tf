@@ -1,12 +1,26 @@
 resource "aws_connect_contact_flow" "flow" {
-  for_each = var.flows
-
+  for_each    = var.flows
   instance_id = var.instance_id
   name        = "${var.name_prefix}-${each.key}"
-  description = each.value.description
   type        = "CONTACT_FLOW"
-  content     = file(each.value.file_path)
+  description = each.value.description
+  content     = file("${path.root}/${each.value.file_path}")
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
+
+
+# resource "aws_connect_contact_flow" "flow" {
+#   for_each = var.flows
+
+#   instance_id = var.instance_id
+#   name        = "${var.name_prefix}-${each.key}"
+#   description = each.value.description
+#   type        = "CONTACT_FLOW"
+#   content     = file(each.value.file_path)
+# }
 
 
 # This style is good for creating brand new flows because it will create brand new IDs.

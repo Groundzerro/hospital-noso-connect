@@ -1,11 +1,24 @@
 resource "aws_connect_contact_flow_module" "module" {
-  for_each = var.modules
-
+  for_each    = var.modules
   instance_id = var.instance_id
   name        = "${var.name_prefix}-${each.key}"
   description = each.value.description
-  content     = file(each.value.file_path)
+  content     = file("${path.root}/${each.value.file_path}")
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
+
+
+# resource "aws_connect_contact_flow_module" "module" {
+#   for_each = var.modules
+
+#   instance_id = var.instance_id
+#   name        = "${var.name_prefix}-${each.key}"
+#   description = each.value.description
+#   content     = file(each.value.file_path)
+# }
 
 
 # resource "aws_connect_contact_flow" "module" {
